@@ -31,13 +31,12 @@ A plataforma utiliza **representações visuais interativas** (blocos, bolinhas 
 | 👧 **Crianças (6–12 anos)** | Usuário direto da plataforma |
 | 👨‍👩‍👧 **Pais e responsáveis** | Acompanham e apoiam o aprendizado |
 | 👩‍🏫 **Professores e educadores** | Utilizam como recurso pedagógico complementar |
-| 🧑‍⚕️ **Fonoaudiólogos** | Ferramenta de suporte em intervenções |
 
 ---
 
 ## ✨ Funcionalidades
 
-- **🔐 Autenticação de usuários** — cadastro e login para personalizar a experiência
+- **🔐 Autenticação de usuários** — nome do usuário para entrada no sistema
 - **🏠 Dashboard de boas-vindas** — tutorial inicial que orienta a criança e o responsável
 - **🎛️ Menu iconográfico de operações** — seleção visual e colorida de adição, subtração, multiplicação e divisão
 - **🧮 Calculadora visual interativa** — inserção de valores e execução das operações
