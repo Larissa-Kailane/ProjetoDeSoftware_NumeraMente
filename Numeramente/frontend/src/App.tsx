@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Duvidas from "./Duvidas/Duvidas";
+import Home from "./Home/Home";
 
 function App() {
   const [mensagem, setMensagem] = useState("");
@@ -15,11 +18,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Numeramente</h1>
-
-      <p>{mensagem}</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/duvidas" element={<Duvidas />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
