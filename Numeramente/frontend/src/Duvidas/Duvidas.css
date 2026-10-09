@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+.cf-page {
+  --bg: #edf5ff;
+  --card: #cfe5ff;
+  --border: #4a6cf0;
+  --title: #d6334b;
+  --heading: #3b4cb8;
+  --text: #1b1b1b;
+  --green: #36c75d;
+  --green-dark: #08a85a;
+  --blue: #4a6cf0;
+  --blue-dark: #0024b8;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--text);
+  padding: 0 clamp(16px, 5vw, 80px) 160px;
+  box-sizing: border-box;
+}
+.cf-page *, .cf-page *::before, .cf-page *::after { box-sizing: border-box; }
+
+/* Cabeçalho */
+.cf-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 36px;
+}
+.cf-logo { width: 56px; height: 56px; }
+.cf-brand {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* Título */
+.cf-title {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 68px);
+  color: var(--title);
+  text-align: center;
+  margin: clamp(32px, 6vw, 72px) 0 clamp(32px, 6vw, 80px);
+  line-height: 1.1;
+}
+
+/* Colunas */
+.cf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 4vw, 64px);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.cf-col { display: flex; flex-direction: column; align-items: center; }
+.cf-col h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--heading);
+  margin: 0 0 12px;
+  text-align: center;
+}
+.cf-card {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  background: var(--card);
+  border: 3px solid var(--border);
+  border-radius: 44px;
+  padding: 44px 36px 36px;
+  display: flex;
+  flex-direction: column;
+}
+.cf-card p {
+  margin: 0 0 28px;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.55;
+}
+.cf-card p strong { font-weight: 800; }
+.cf-demo {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cf-demo.center { align-items: center; }
+
+/* Botão de operação */
+.cf-op {
+  position: relative;
+  align-self: center;
+  width: 164px;
+  height: 100px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--green);
+  box-shadow: 0 8px 0 var(--green-dark);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.cf-op svg { width: 36px; height: 36px; }
+
+/* Campo e botão calcular */
+.cf-input {
+  width: 100%;
+  max-width: 230px;
+  height: 56px;
+  border: 3px solid var(--green-dark);
+  border-radius: 16px;
+  background: #fff;
+  padding: 0 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--text);
+}
+.cf-input::placeholder { color: #8a8a8a; }
+.cf-input:focus-visible, .cf-op:focus-visible, .cf-calc:focus-visible {
+  outline: 3px solid var(--heading);
+  outline-offset: 3px;
+}
+.cf-calc {
+  position: relative;
+  margin-top: 28px;
+  min-width: 138px;
+  height: 56px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--blue);
+  box-shadow: 0 8px 0 var(--blue-dark);
+  color: #fff;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Resultado */
+.cf-result {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px solid var(--green-dark);
+  border-radius: 24px;
+  padding: 22px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 12px;
+}
+.cf-result svg { width: 52px; height: 52px; }
+
+/* Cursores */
+.cf-cursor {
+  position: absolute;
+  width: 44px;
+  height: 56px;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.15));
+}
+
+/* Gato */
+.cf-cat {
+  position: absolute;
+  left: -8px;
+  bottom: -6px;
+  width: clamp(130px, 14vw, 200px);
+  pointer-events: none;
+}
+
+@media (max-width: 960px) {
+  .cf-grid { grid-template-columns: 1fr; max-width: 520px; }
+  .cf-card { min-height: 0; }
+  .cf-demo { margin-top: 12px; }
+}
+;
