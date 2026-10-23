@@ -1,5 +1,6 @@
 
 import "./Login.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import gatoLivro from "../assets/gato.png";
@@ -62,9 +63,11 @@ function YarnBall({
 
 function Login() {
   const navegar = useNavigate();
+  const [nome, setNome] = useState("");
 
+  // leva o nome digitado para a saudação da tela da calculadora
   function comecar() {
-    navegar("/duvidas");
+    navegar("/calculadora", { state: { nome } });
   }
 
   return (
@@ -112,9 +115,11 @@ function Login() {
               type="text"
               id="nome"
               placeholder="Digite seu nome..."
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
             />
 
-            {/* aqui o botão ainda não salva as informações */}
+            {/* o nome vai junto na navegação, mas ainda não é salvo no backend */}
             <button type="button" onClick={comecar}>
               Vamos começar
             </button>
