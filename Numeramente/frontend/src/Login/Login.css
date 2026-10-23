@@ -1,0 +1,212 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 28px 5%;
+  background-color: #edf6ff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #080808;
+}
+
+/* logo do NumeraMente */
+
+.login-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.login-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+.login-brand {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  margin: 0
+}
+/* conteúdo principal */
+
+.login-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* area dos textos */
+
+.texto-inicial {
+  flex: 1;
+  max-width: 390px;
+  line-height: 1.35;
+}
+
+/* titulo principal */
+
+.texto-inicial h1 {
+  margin: 0 0 10px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.texto-inicial h1 span {
+  display: block;
+  color: #476bff;
+}
+
+/* subtítulo */
+
+.texto-inicial h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* descrição da plataforma */
+
+.descricao-login {
+  margin-top: 30px;
+  margin-bottom: 32px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+/* campo de nome e botão */
+
+.campo-nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campo-nome label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.campo-nome input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 320px;
+  padding: 11px 12px;
+  border: 1px solid #999;
+  border-radius: 12px;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.campo-nome input:focus {
+  border-color: #476bff;
+  outline: 2px solid #476bff;
+  outline-offset: 1px;
+}
+
+/* botão inicial */
+
+.campo-nome button {
+  align-self: center;
+  margin-top: 18px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 12px;
+  background-color: #476bff;
+  box-shadow: 0 4px 0 #1936ba;
+  color: #fff;
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.campo-nome button:hover {
+  background-color: #3658e8;
+}
+
+/* area da ilustração */
+
+.ilustracoes-login {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 420px;
+}
+
+/* circulo decorativo de fundo */
+
+.circulo-logo {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 0;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+
+/* mascote */
+
+.gato-logo {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* estrelas */
+
+.estrela-logo-superior,
+.estrela-logo-esquerda,
+.estrela-logo-direita {
+  position: absolute;
+  z-index: 3;
+  height: auto;
+  object-fit: contain;
+}
+
+/* estrela superior */
+
+.estrela-logo-superior {
+  top: 5%;
+  right: 27%;
+  width: 50px;
+}
+
+/* estrela pequena à esquerda */
+
+.estrela-logo-esquerda {
+  top: 35%;
+  left: 30%;
+  width: 40px;
+}
+
+/* estrela grande à direita */
+
+.estrela-logo-direita {
+  top: 34%;
+  right: -2%;
+  width: 65px;
+}
+
