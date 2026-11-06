@@ -18,7 +18,13 @@
 #     return {"mensagem": "Backend do Numeramente funcionando!"}
 
 
-
+# como rodar isso?
+# 
+# 1 - instale o fastAPI: pip install fastapi uvicorn
+# 
+# 2 - execute isso na pasta backend: uvicorn main:app --reload
+#
+# 3 - ver os resultados na pagina http://localhost:8000/docs
 
 from datetime import datetime, timezone
 from pathlib import Path
@@ -102,7 +108,7 @@ def accept_terms(body: AcceptIn, request: Request):
 
 
 @app.get("/terms/status/{user_id}")
-def acceptance_statussss(user_id: str):
+def acceptance_status(user_id: str):
     with get_db() as db:
         row = db.execute(
             "SELECT 1 FROM acceptances WHERE user_id = ? AND version = ?",
